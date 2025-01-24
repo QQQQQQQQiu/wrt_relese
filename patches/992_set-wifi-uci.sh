@@ -22,8 +22,8 @@ set wireless.radio${radio}.txpower="${txpower}"
 set wireless.radio${radio}.cell_density='0'
 set wireless.radio${radio}.disabled='0'
 set wireless.default_radio${radio}.ssid="${ssid}"
-set wireless.default_radio${radio}.encryption='psk2+ccmp'
-set wireless.default_radio${radio}.key="${key}"
+set wireless.default_radio${radio}.encryption='none'
+set wireless.default_radio${radio}.key=""
 set wireless.default_radio${radio}.ieee80211k='1'
 set wireless.default_radio${radio}.time_advertisement='2'
 set wireless.default_radio${radio}.time_zone='CST-8'
@@ -34,8 +34,8 @@ EOF
 }
 
 jdc_ax1800_pro_wifi_cfg() {
-    configure_wifi 0 149 HE80 20 'Jdc_AX1800PRO_5G' '12345678'
-    configure_wifi 1 1 HE20 20 'Jdc_AX1800PRO' '12345678'
+    configure_wifi 0 149 HE80 20 'OpenWrt_5G' ''
+    configure_wifi 1 1 HE20 20 'OpenWrt' ''
 }
 
 jdc_ax6600_wifi_cfg() {
